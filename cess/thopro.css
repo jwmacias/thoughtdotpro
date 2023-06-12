@@ -1,0 +1,442 @@
+/* 
+
+Styles:		●――● Thought Process
+
+origin: 	1.0 — 05/01/23
+version: 	2.0 — 06/09/23 Update
+author: 	Joshua Blankenship
+email: 		joshua@blankenship.xyz
+website: 	http://blankenship.xyz
+         
+
+/* --------------------------------------------------
+
+
+Page Map 
+
+Aside → Timezones
+Header → Logo + Tagline
+Section → Explainer Copy
+Figure → Hero Image
+Section → Media Architecture List
+Section → Digital Experience List
+Section → Services
+Div → Call to Action
+Footer → Copyright
+
+
+---------------------------------------------------- */
+
+
+/* FOUNDATION */
+
+	*, html, body, div, span, object, iframe,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, samp,
+	small, strike, strong, sub, sup, tt, var,
+	dl, dt, dd, ol, ul, li, img, figure, figcaption,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		outline: none;
+		}
+
+	html {
+    	font-size: 16px;
+	}
+
+	ul {
+	    list-style-type: none;
+	}
+
+	@media(min-width:700px) {
+	    html {
+	        font-size: 16px
+	    }
+	}
+
+	@media(min-width:1200px) {
+	    html {
+	        font-size: 17px
+	    }
+	}
+
+	@media(min-width:1400px) {
+	    html {
+	        font-size: 18px
+	    }
+	}
+
+	body {
+		background-color: #111;
+		color: #eee;
+		font-family: 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+		margin:  0 auto;
+		padding: 0;
+	}
+
+	main { 
+		width: 60vw; 
+		margin:  0 auto;
+		padding: 0;
+	}
+
+	section {
+		width: 60vw;
+	}
+
+
+/* GRID BACKGROUND */
+
+	.vert-grid {
+	  background-size: 5vw 100%;
+	  background-image: linear-gradient(to right,
+	                                    #333 0%,
+	                                    transparent 2%,
+	                                    transparent 100%);
+	}
+
+
+/* ASIDE -- TIMEZONES */
+
+	aside {
+		color: #777;
+		margin: 0 auto;
+		display: grid;
+	    grid-template-columns: 30vw 15vw 15vw;
+	    padding: 2rem 0 0 0;
+	}
+
+	aside p {
+		color: #777;
+		font: 800 .5rem/1rem "IBM Plex Mono", monospace;
+		letter-spacing: .15rem;
+		text-transform: uppercase;
+	}
+
+
+/* SECTION -- HEADER */
+
+	header {
+		display: grid;
+	    grid-template-columns: 20vw 25vw;
+	    padding: 8rem 0;
+	}
+
+	h1 { display: none; } /* Note: Hides brand name so only SEO bots see it */
+
+	h2 {
+		color: #f5a92b;
+		font: 400 1.5rem/2rem "IBM Plex Mono", monospace;
+		margin: 1rem 0 0 10vw;
+	}
+
+	img#logo { 
+		width: 72%; 
+	}
+
+
+/* SECTION -- EXPLAINER */
+
+	 h3 {
+		color: #777;
+		font: 100 1rem/1.5rem "IBM Plex Mono", monospace;
+		margin-bottom: 1.5rem;
+		width: 75%;
+		padding-left: 0vw;
+	}
+
+	h3:last-of-type {
+		margin-bottom: 6rem;
+	}
+
+
+/* FIGURE -- HERO IMAGE */
+
+	main figure img {
+		border-radius: 2.75rem;
+		width: 100%;
+	}
+
+	figcaption {
+		color: #666;
+		margin: 1.5rem auto 8rem;
+		display: grid;
+		font: 400 .75rem/1rem "IBM Plex Mono", monospace;
+	    grid-template-columns: 25vw 25vw;
+	    grid-gap: 5vw;
+	}
+
+	figcaption p strong { 
+		color: #fff; 
+		font: inherit;
+		padding-left: 10vw;
+	}
+
+
+/* SECTION -- LISTS */
+
+	section h4 {
+		background: #111;
+		border: 2px solid #f5a92b;
+		box-sizing: border-box;
+		color: #f5a92b;
+		font-family: "din-2014-rounded-variable", 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+		font-variation-settings: "wght" 400;
+		letter-spacing: .2rem;
+		margin-left: 5vw;
+		text-transform: uppercase;
+		padding: 2rem 2rem 1.85rem 2rem;
+		width: calc(30vw + 2px);
+	}
+
+	section ol {
+		counter-reset: item;
+		list-style-type: none;
+		list-style-position: inside;
+		border-left: 2px solid #f5a92b;
+		margin-left: 10vw;
+		margin-bottom: 3rem;
+	}
+
+	section ol li {
+		background: #111;
+		border-bottom: 2px solid #FFF;
+		border-right: 2px solid #FFF;
+		box-sizing: border-box;
+		color: #FFF;
+		font: 400 1rem/1.5rem "IBM Plex Mono", monospace;
+		padding: 2rem;		
+		width: 25vw;
+	}
+
+	section ol li:before { 
+		color: #f5a92b;
+		content: counter(item) " "; 
+		counter-increment: item;
+		font-family: "din-2014-rounded-variable", 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+		font-variation-settings: "wght" 800;
+		padding-right: 2rem;
+	}
+
+
+/* SECTION -- SERVICES */
+
+	section#services {
+		margin: 0 auto;
+		display: grid;
+	    grid-template-columns: 15vw 45vw;
+	    padding: 8rem 0;
+	}
+
+	section#services ul {
+		display: grid;
+	    grid-template-columns: 15vw 15vw 15vw;
+	}
+
+	section#services li {
+		color: #ddd;
+		font: 400 .85rem/1.25rem "IBM Plex Mono", monospace;
+		padding-right: 2.5vw;
+	}
+
+	section#services li strong { 
+		color: #f5a92b;
+		font: 400 .85rem/1.25rem "IBM Plex Mono", monospace;
+		letter-spacing: .1rem;
+		text-transform: uppercase;
+	}
+
+	section#services h4 {
+		background: transparent;
+		border: none 0;
+		text-align: left;
+		padding: 0;
+		margin-right: 5vw;
+	}
+
+
+/* CTA */
+
+	div#cta { 
+		border-top: 2px solid #222; 
+		border-bottom: 2px solid #222; 
+	}
+
+	button {
+		background: #f5a92b;
+		border: 0 none;
+		border-radius: 2.75rem;
+		color: #111;
+		font: 400 1rem/1.5rem "IBM Plex Mono", monospace;
+		margin-left: 15vw;
+		padding: 2rem;
+		width: 25vw;
+	}
+
+	button a { color: inherit; }
+	
+
+/* SECTION -- FOOTER */
+
+	footer section {
+		margin: 0 auto;
+		display: grid;
+	    grid-template-columns: 15vw 15vw 15vw 15vw;
+	    padding: 6rem 0;
+	}
+
+	footer p {
+		color: #666;
+		font: 400 .75rem/1rem "IBM Plex Mono", monospace;
+	}
+
+
+/* ●――● HTML Entity WiWi Logo */
+
+	footer section p em {
+		letter-spacing: -.05rem;
+	}
+
+	.white { color: #fff; }
+	.brand { color: #f5a92b; }
+
+
+
+/* SMALL SCREEN RESPONSIVE STYLES */
+
+	@media only screen and (max-width: 800px) and (min-width: 100px)  {
+
+		aside { display: none; }
+
+		main { 
+			width: 100vw; 
+		}
+
+		.vert-grid {
+		  background-size: 12.5vw 100%; 
+			background-image: linear-gradient(to right,
+	                                    #333 0%,
+	                                    transparent 2%,
+	                                    transparent 100%);		
+		}
+
+		section {
+			width: 100vw;
+			margin: 4rem auto;
+		}
+
+		img#logo { 
+			margin: 0 auto 4rem;
+			width: 75vw;	
+		}
+
+		header {
+			display: block;
+			margin: 0 12.5vw;
+		    padding: 4rem 0 2rem;
+		}
+
+		h2 {
+			font: 400 1.5rem/1.75rem "IBM Plex Mono", monospace;
+			margin: 0;
+			text-align: left;
+			width: 75vw;
+		}
+
+		h3 {
+			display: block;	
+			font: 400 .8rem/1.2rem "IBM Plex Mono", monospace;
+			margin: 1rem 12.5vw 0;
+			width: 75vw;
+		}
+
+		figure {
+			margin: 0 auto;
+			width: 100vw;
+		}
+
+		main figure img {
+			border-radius: 0;
+			width: 100%;
+		}
+
+		figcaption p strong { 
+			color: #fff; 
+			font: inherit;
+			padding-left: 0;
+		}
+
+		figcaption {
+			display: block;	
+			font: 400 .8rem/1.2rem "IBM Plex Mono", monospace;
+			margin: 1rem 12.5vw 0;
+			width: 75vw;
+		}
+
+		section h4 {
+			margin: 0 12.5vw;
+			padding: 2rem 2rem 1.8rem 2rem;
+			width: 75vw;
+		}
+
+		section ol {
+			margin: 0 12.5vw;
+			width: 75vw;
+		}
+
+		section ol li {
+			border-bottom: 2px solid #FFF;
+			border-right: 2px solid #FFF;
+			font: 400 .8rem/1.5rem "IBM Plex Mono", monospace;
+			margin-left: 0;
+			width: 100%;
+		}
+
+		section#services,
+		section#services ul {
+			display: block;
+		}
+
+		section#services h4 {
+			background: transparent;
+			border: none 0;
+			text-align: left;
+			padding: 0;
+			margin: 0 12.5vw 2rem;
+		}
+
+		section#services li {
+			font: 400 .85rem/1.25rem "IBM Plex Mono", monospace;
+			margin: 0 12.5vw 2rem;
+			width: 75vw;
+			padding-right: 0;
+		}
+
+		button {
+			font: 400 .8rem/1.5rem "IBM Plex Mono", monospace;
+			margin: 0 12.5vw;
+			width: 75vw;
+		}
+		
+		footer section {
+			margin: 0 12.5vw;
+			display: block;
+		    padding: 4rem 0;
+		}
+
+		footer p {
+			font: 400 .75rem/1rem "IBM Plex Mono", monospace;
+			margin-bottom: 2rem;
+			padding: 0;
+			text-align: left;
+		}
+
+	} 
+
+
+/* 2023 */
+
+	
