@@ -130,7 +130,7 @@ Footer → Copyright
 	h2 {
 		color: #f5a92b;
 		font: 400 1.5rem/2rem "IBM Plex Mono", monospace;
-		margin: 1rem 0 0 10vw;
+		margin: -.5rem 0 0 10vw;
 	}
 
 	img#logo { 
@@ -144,7 +144,7 @@ Footer → Copyright
 		color: #777;
 		font: 100 1rem/1.5rem "IBM Plex Mono", monospace;
 		margin-bottom: 1.5rem;
-		width: 75%;
+		width: 100%;
 		padding-left: 0vw;
 	}
 
