@@ -93,8 +93,8 @@ Footer → Copyright
 	.vert-grid {
 	  background-size: 5vw 100%;
 	  background-image: linear-gradient(to right,
-	                                    #333 0%,
-	                                    transparent 2%,
+	                                    #222 0%,
+	                                    transparent 1%,
 	                                    transparent 100%);
 	}
 
@@ -172,7 +172,7 @@ Footer → Copyright
 	figcaption p strong { 
 		color: #fff; 
 		font: inherit;
-		padding-left: 10vw;
+		padding-left: 5vw;
 	}
 
 
