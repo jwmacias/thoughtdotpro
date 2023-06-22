@@ -426,9 +426,9 @@ Footer → Copyright
 		}
 		
 		footer section {
-			margin: 0 12.5vw;
+			margin: 0 auto;
 			display: block;
-		    padding: 4rem 0;
+		    	padding: 4rem 0;
 		}
 
 		footer p {
