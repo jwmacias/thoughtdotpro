@@ -12,21 +12,21 @@
 	<meta name="viewport" content="user-scalable=1, width=device-width, initial-scale=1.0, maximum-scale=2.0">
 	<meta name="referrer" content="origin">
 
-	<meta name="twitter:title" content="Podcast Standards Project">
-	<meta name="twitter:description" content="The Podcast Standards Project (PSP) is a grassroots coalition working to establish modern, open standards for the podcast industry.">
+	<meta name="twitter:title" content="Thought Process">
+	<meta name="twitter:description" content="Early engagements focusing on providing answers to the critical questions about ambitious creative and technical ideas for Agency, Architect, & Brand.">
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image:src" content="#">
+	<meta name="twitter:image:src" content="http://thought.pro/images/thoughtprocess.logo.svg">
 
-	<meta property="og:title" content="Podcast Standards Project">
-	<meta property="og:site_name" content="Podcast Standards Project">	
-	<meta property="og:description" content="The Podcast Standards Project (PSP) is a grassroots coalition working to establish modern, open standards for the podcast industry.">
+	<meta property="og:title" content="Thought Process">
+	<meta property="og:site_name" content="Thought Process">	
+	<meta property="og:description" content="Early engagements focusing on providing answers to the critical questions about ambitious creative and technical ideas for Agency, Architect, & Brand.">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://podstandards.com">
-	<meta property="og:image" content="#">
+	<meta property="og:url" content="http://thought.pro">
+	<meta property="og:image" content="http://thought.pro/images/thoughtprocess.logo.svg">
 
-	<meta name="description" content="The Podcast Standards Project (PSP) is a grassroots coalition working to establish modern, open standards for the podcast industry.">
+	<meta name="description" content="Early engagements focusing on providing answers to the critical questions about ambitious creative and technical ideas for Agency, Architect, & Brand.">
 	
-	<meta id="MetaKeywords" name="KEYWORDS" content="podcasting,podcasts,podcast standards project,podcast standards">
+	<meta id="MetaKeywords" name="KEYWORDS" content="VR, AR, MR, XR, MEP, CAD, RHINO, BIM, LED, Projection, Digital Experience Agency, Digital Agency, UI/UX, Hardware Prototyping, Software Prototyping,. Fabrication insight, asdvance optioneering, prototyping, agency">
 
 	<link rel="stylesheet" href="thopro.css" media="all">
 	<link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -38,8 +38,21 @@
 <body class="vert-grid">
 	<main>
 		<aside>
-			<p>Los Angeles CA 12:18pm</p>
-			<p>Brooklyn NY 3:18pm</p>
+			<p>Los Angeles <span id="date-time-la"></span>
+			<script>
+          		var dm = new Date();
+           		var nm = dm.toLocaleTimeString(("en-US"),{timeZone: "America/Los_Angeles", hour: "2-digit", minute: "2-digit" });
+           		document.getElementById('date-time-la').innerHTML=nm;
+       			</script>
+        		</p>
+
+			<p>Brooklyn <span id="date-time-ny"></span>
+			<script>
+           		var dm = new Date();
+           		var nm = dm.toLocaleTimeString(("en-US"),{timeZone: "America/New_York", hour: "2-digit", minute: "2-digit" });
+          		document.getElementById('date-time-ny').innerHTML=nm;
+       			</script>
+         		</p>
 		</aside>
 
 		<header>
