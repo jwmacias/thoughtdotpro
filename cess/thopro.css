@@ -227,8 +227,8 @@ Footer → Copyright
 	section#services {
 		margin: 0 auto;
 		display: grid;
-	    grid-template-columns: 15vw 45vw;
-	    padding: 8rem 0;
+	    	grid-template-columns: 15vw 45vw;
+	    	padding: 8rem 0;
 	}
 
 	section#services ul {
@@ -323,10 +323,6 @@ Footer → Copyright
 	                                    transparent 100%);		
 		}
 
-		.vert-grid {
-			background: #111;
-		}
-		
 		section {
 			width: 100vw;
 			margin: 4rem auto;
@@ -340,7 +336,7 @@ Footer → Copyright
 		header {
 			display: block;
 			margin: 0 12.5vw;
-		    padding: 4rem 0 2rem;
+		    	padding: 4rem 0 0;
 		}
 
 		h2 {
@@ -404,6 +400,10 @@ Footer → Copyright
 			display: block;
 		}
 
+		section#services {
+			padding: 4rem 0;
+		}
+		
 		section#services h4 {
 			background: transparent;
 			border: none 0;
